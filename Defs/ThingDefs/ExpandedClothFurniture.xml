@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Buildings>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>PaddedSleepingSpot</defName>
+    <label>padded sleeping spot</label>
+    <Description>A spot on the floor padded with raw cotton fibre. Better than sleeping on bare ground but still far from ideal.</Description>
+    <ThingClass>Building_Bed</ThingClass>
+    <graphicData>
+      <texPath>Things/PaddedSpot</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(3,4)</drawSize>
+    </graphicData>
+    <AltitudeLayer>FloorEmplacement</AltitudeLayer>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <WorkToBuild>200</WorkToBuild>
+      <BedRestEffectiveness>0.85</BedRestEffectiveness>
+      <Comfort>0.5</Comfort>
+      <ImmunityGainSpeedFactor>1.0</ImmunityGainSpeedFactor>
+    </statBases>
+    <scatterableOnMapGen>false</scatterableOnMapGen>
+    <useHitPoints>true</useHitPoints>
+    <Size>(1,2)</Size>
+		<CostList>
+				<RawCotton>20</RawCotton>
+		</CostList>
+    <DesignationCategory>Furniture</DesignationCategory>
+    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <Passability>Standable</Passability>
+    <DrawGUIOverlay>True</DrawGUIOverlay>
+    <building>
+      <Bed_ShowSleeperBody>True</Bed_ShowSleeperBody>
+      <Bed_HealPerDay>2</Bed_HealPerDay>
+      <canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
+      <ai_chillDestination>false</ai_chillDestination>
+    </building>
+    <LeaveResourcesWhenKilled>True</LeaveResourcesWhenKilled>
+    <killedLeavings>
+      <RawCotton>4</RawCotton>
+    </killedLeavings>
+    <comps>
+			<li Class="CompProperties_RoomIdentifier">
+				<roomStat>Impressiveness</roomStat>
+			</li>
+		</comps>
+  </ThingDef>
+
+</Buildings>

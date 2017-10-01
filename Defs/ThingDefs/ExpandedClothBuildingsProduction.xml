@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ThingDefs>
+
+  <ThingDef ParentName="BenchBase">
+		<DefName>BenchTextile</DefName>
+		<Label>textile bench</Label>
+		<ThingClass>Building_WorkTable</ThingClass>
+		<Description>A bench with equipment to process raw cotton into cloth and to salvage unwanted clothing.</Description>
+    <graphicData>
+      <texPath>Things/BenchTextile</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(3.5,1.5)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <CostList>
+      <Steel>30</Steel>
+      <WoodLog>20</WoodLog>
+    </CostList>
+		<AltitudeLayer>Building</AltitudeLayer>
+    <fillPercent>0.5</fillPercent>
+		<useHitPoints>True</useHitPoints>
+    <statBases>
+      <WorkToBuild>750</WorkToBuild>
+      <MaxHitPoints>180</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+    </statBases>
+		<Size>(3,1)</Size>
+		<DesignationCategory>Production</DesignationCategory>
+		<Passability>PassThroughOnly</Passability>
+    <pathCost>70</pathCost>
+		<hasInteractionCell>True</hasInteractionCell>
+		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+		<surfaceType>Item</surfaceType>
+		<recipes>
+			<li>MakeCottonCloth</li>
+			<li>RecycleApparelHat</li>
+			<li>RecycleApparelShirt</li>
+			<li>RecycleApparelPants</li>
+			<li>RecycleApparelJacket</li>
+			<li>RecycleApparelParka</li>
+		</recipes>
+		<inspectorTabs>
+			<li>ITab_Bills</li>
+		</inspectorTabs>
+    <building>
+		<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+    </building>
+    <researchPrerequisites><li>CottonProcessing</li></researchPrerequisites>
+	</ThingDef>
+
+</ThingDefs>
